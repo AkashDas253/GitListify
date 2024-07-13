@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="credentialsPrompt" class="hidden">
+        <form id="credentialsForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            <label for="repo">Repository:</label>
+            <input type="text" id="repo" required>
+            <label for="authToken">Auth Token:</label>
+            <input type="text" id="authToken" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div id="taskManager" class="hidden">
+        <div id="taskInput">
+            <form id="taskForm">
+                <label for="taskContent">Task Content:</label>
+                <input type="text" id="taskContent" required>
+                <label for="timeToDo">Due Date (YYYY-MM-DD):</label>
+                <input type="date" id="timeToDo" required>
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+
+        <div id="taskListManage" >
+            <label for="sortBy">Sort By:</label>
+            <select id="sortBy">
+                <option value="creationDate">Date of Creation</option>
+                <option value="dueDate">Due Date</option>
+            </select>
+        </div>
+
+        <div id="taskHeader" >
+            <div class="task-list-item">Due Date</div>
+            <div class="task-list-item">Task</div>
+            <div class="task-list-item">Actions</div>
+        </div>
+
+        <div id="taskContainer" class="task-list">
+            <!-- Tasks will be dynamically added here as-->
+            <!--
+                <div class="task-item">
+                    <div class="task-date">2024-07-11</div>
+                    <div class="task-content">wxddfhtfhrthrthrthfg</div>
+                    <div class="task-actions">
+                        <button>✏️</button>
+                        <button>⬜</button>
+                        <button>🗑️</button>
+                    </div>
+                </div>
+
+            -->
+        </div>
+    </div>
+
+    <script type="module">
+        import { Octokit, App } from "https://esm.sh/octokit";
+    </script>
+    <script src="github_file_manager.js"></script>
+    <script src="task_manager.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>

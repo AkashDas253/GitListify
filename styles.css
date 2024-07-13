@@ -1,0 +1,297 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Credentials form styles */
+#credentialsPrompt {
+    max-width: 90%;
+    margin: 20px auto;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#credentialsForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#credentialsForm label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#credentialsForm input[type="text"],
+#credentialsForm input[type="password"] {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Ensure padding and border are included in width calculation */
+}
+
+#credentialsForm button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#credentialsForm button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Task Manager styles */
+#taskManager {
+    max-width: 90%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#taskInput {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+}
+
+#taskInput form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+}
+
+#taskInput label {
+    margin-bottom: 10px;
+}
+
+#taskInput input[type="text"],
+#taskInput input[type="date"] {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Ensure padding and border are included in width calculation */
+}
+
+#taskInput button[type="submit"] {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* Full width on smaller screens */
+}
+
+#taskInput button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#taskListManage {
+    margin-bottom: 10px;
+}
+
+#taskListManage label {
+    margin-right: 10px;
+}
+
+#taskListManage select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Ensure padding and border are included in width calculation */
+}
+
+#taskListManage select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+
+/* Task header styles */
+#taskHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center align items vertically */
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px 4px 0 0;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* Task container styles */
+#taskContainer {
+    flex: 1; /* Take remaining vertical space */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    padding-right: 20px; /* Add padding to account for scrollbar */
+    margin-right: -20px; /* Compensate for padding to avoid horizontal overflow */
+}
+
+
+/* Task list styles */
+.task-list-item {
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border-left: 1px solid #fff;
+    width: 15%;
+}
+
+.task-list-item:first-child {
+    text-align: left;
+    padding-left: 20px;
+    border-left: none;
+    width: 15%;
+}
+
+.task-list-item:nth-child(2) {
+    width: 70%;
+}
+
+.task-list-item:last-child {
+    text-align: center;
+    width: 15%;
+}
+
+.task-list-item:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.task-list-item button {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.task-list-item button:hover {
+    color: #007bff;
+}
+
+.task-list-item button:focus {
+    outline: none;
+}
+
+.task-list-item button:active {
+    transform: translateY(1px);
+}
+
+/* Task item styles */
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.task-date,
+.task-content,
+.task-actions {
+    text-align: center;
+    width: 15%;
+}
+
+.task-content {
+    width: 70%;
+}
+
+.task-actions {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.task-actions button {
+    margin: 0 5px;
+}
+
+/* Task actions styles */
+.task-actions {
+    width: 15%; /* Default width for task actions */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.task-actions button {
+    margin: 0 5px; /* Spacing between buttons */
+    font-size: 1.2em; /* Button icon size */
+}
+
+
+/* Adjustmrnt for smaller screen */
+@media (max-width: 768px) {
+    /* Task list item styles */
+    .task-list-item {
+        text-align: left; /* Align text to the left */
+        padding: 10px;
+        width: 90%; /* Adjust width percentages as per your requirement */
+        box-sizing: border-box; /* Include padding and border in width calculation */
+        border-left: none; /* Remove left border */
+        margin-bottom: 10px; /* Add margin between items */
+    }
+
+    .task-list-item:first-child,
+    .task-list-item:nth-child(2),
+    .task-list-item:last-child {
+        width: 90%; /* Adjust width percentages as per your requirement */
+    }
+
+    /* Task item styles */
+    .task-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #ddd;
+        padding: 10px 0;
+    }
+
+    .task-date,
+    .task-content {
+        width: 90%; /* Adjust width percentages as per your requirement */
+        text-align: left; /* Align text to the left */
+    }
+
+    .task-content {
+        padding-left: 10px; /* Add padding for content */
+    }
+
+    /* Task actions styles */
+    .task-actions {
+        width: 10%; /* Adjust width percentages as per your requirement */
+        display: flex;
+        flex-direction: column; /* Stack actions vertically */
+        align-items: flex-start; /* Align items to the start */
+        padding-top: 10px; /* Add padding for actions */
+    }
+
+    .task-actions button {
+        margin: 5px 0; /* Vertical margin between buttons */
+    }
+}
