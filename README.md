@@ -2,7 +2,7 @@
 
 This is a static website hosted on GitHub that uses the Octokit API to save data on a specified GitHub repository. The website allows users to manage tasks.
 
-[View the live website here](https://<username>.github.io/<repository>)
+[View the live website here](https://akashdas253.github.io/Todo_Github/)
 
 ## Features
 
@@ -23,16 +23,13 @@ This is a static website hosted on GitHub that uses the Octokit API to save data
 
 The website is implemented in HTML, CSS, and JavaScript. It uses the Octokit API to interact with GitHub.
 
-The main HTML file is [`index.html`](https://github.com/your-username/your-repo/blob/main/index.html).
+The main HTML file is [`index.html`](https://github.com/AkashDas253/Todo_Github/blob/main/index.html).
 
-The CSS styles are in [`styles.css`](https://github.com/your-username/your-repo/blob/main/styles.css).
+The CSS styles are in [`styles.css`](https://github.com/AkashDas253/Todo_Github/blob/main/styles.css).
 
-The JavaScript code is in [`github_file_manager.js`](https://github.com/your-username/your-repo/blob/main/github_file_manager.js), [`task_manager.js`](https://github.com/your-username/your-repo/blob/main/task_manager.js), and [`app.js`](https://github.com/your-username/your-repo/blob/main/app.js). `github_file_manager.js` handles interactions with GitHub via the Octokit API. `task_manager.js` handles task management on the website. `app.js` is the main application script.
+The JavaScript code is in [`github_file_manager.js`](https://github.com/AkashDas253/Todo_Github/blob/main/github_file_manager.js), [`task_manager.js`](https://github.com/AkashDas253/Todo_Github/blob/main/task_manager.js), and [`app.js`](https://github.com/AkashDas253/Todo_Github/blob/main/app.js). `github_file_manager.js` handles interactions with GitHub via the Octokit API. `task_manager.js` handles task management on the website. `app.js` is the main application script.
 
 ## Contributing
 
 Contributions are welcome. Please open an issue to discuss your idea or submit a pull request.
 
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
