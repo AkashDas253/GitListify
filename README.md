@@ -11,6 +11,15 @@ This is a static website hosted on GitHub that uses the Octokit API to save data
 - Task sorting by creation date or due date
 - Task editing and deletion
 
+## Tech Stack
+
+- HTML
+- CSS
+- JavaScript
+- Octokit API  [[Octokit API documentation](https://docs.github.com/en/rest)]
+- Git
+- GitHub
+
 ## Usage
 
 1. Open the website.
