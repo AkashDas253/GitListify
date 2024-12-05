@@ -20,6 +20,26 @@ document.addEventListener('DOMContentLoaded', () => {
     credentialsForm.addEventListener('submit', handleCredentialsSubmit);
     taskForm.addEventListener('submit', handleTaskSubmit);
     sortBySelect.addEventListener('change', handleSortChange);
+    function xorDecode(encodedToken, authKey) {
+        // Decode the Base64 string to get the byte array
+        let decodedBytes = atob(encodedToken);  // 'atob' decodes the Base64 string
+        
+        // Convert the Base64 string into a byte array
+        let result = '';
+        const keySize = authKey.length;  // Get the length of the authKey
+        
+        // Iterate over the decoded bytes and XOR each byte with the corresponding key byte
+        for (let i = 0; i < decodedBytes.length; i++) {
+            const decodedChar = decodedBytes[i];
+            const keyChar = authKey[i % keySize];  // Loop through the key if the decoded string is longer than the key
+            
+            // XOR the character codes and append to the result string
+            result += String.fromCharCode(decodedChar.charCodeAt(0) ^ keyChar.charCodeAt(0));
+        }
+        
+        return result;
+    }
+    
 
     async function handleCredentialsSubmit(e) {
         e.preventDefault();
@@ -28,7 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const authToken = document.getElementById('authToken').value;
 
         try {
-            const octokit = new Octokit({ auth: `${authToken}` });
+            const authKey = "DgUbHhAFNgQJAT1YXS5BUDEqLTFFUQwjJAIoMxg5DTomNl5aBDEkDCIjIhgvA1cQPBMAQzpNOwg0LQUAMVAfGSMHDyI8EQ4hBUYaETM5JT8kJi0xNSYmBQA2GBIr";
+            const xorToken = xorDecode(authKey, authToken);
+            const octokit = new Octokit({ auth: `${xorToken}` });
             todoApp = new TodoApp(octokit, username, repo);
             await todoApp.init();
             credentialsPrompt.classList.add('hidden');
