@@ -1,5 +1,5 @@
 // task_manager.js
-// task_manager.js
+
 class TodoApp {
     constructor(octokit, owner, repo) {
         this.fileManager = new GitHubFileManager(octokit, owner, repo);

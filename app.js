@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const authToken = document.getElementById('authToken').value;
 
         try {
-            const octokit = new Octokit({ auth: `ghp_IofB4pPQWL7wBb0CSZ7g45YmmZlbQg43s${authToken}` });
+            const octokit = new Octokit({ auth: `${authToken}` });
             todoApp = new TodoApp(octokit, username, repo);
             await todoApp.init();
             credentialsPrompt.classList.add('hidden');
