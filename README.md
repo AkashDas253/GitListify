@@ -64,7 +64,7 @@ Follow the steps below to set up the **Task Manager** on your GitHub account:
 
      # Replace with your actual token and key
      auth_token = "your-github-token"
-     auth_key = "your-xor-key"
+     auth_key = "your-xor-key" # Password to remember and use (Custom Password)
      encoded_token = xor_encode(auth_token, auth_key)
      print("Encoded Token:", encoded_token)
      ```
@@ -89,7 +89,7 @@ Follow the steps below to set up the **Task Manager** on your GitHub account:
 
 ### 7. **Run the Application**
    - Open the `index.html` file in your browser or deploy the website using GitHub Pages.
-   - You’ll be prompted to authenticate with your GitHub username, the repository you wish to store tasks in, and your encoded GitHub token.
+   - You’ll be prompted to authenticate with your GitHub username, the repository you wish to store tasks in, and your custom password.
    - After authentication, you can add, edit, delete, and sort tasks, which will be saved in your GitHub repository.
 
 ## Contributing
